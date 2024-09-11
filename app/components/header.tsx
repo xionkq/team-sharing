@@ -23,7 +23,7 @@ const nav = [
   },
 ]
 
-export default function Header() {
+export default function Nav() {
   const pathname = usePathname()
   return (
     <div className="h-20 flex justify-between items-center">
