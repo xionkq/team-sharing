@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Header from "@/app/components/header";
 
 export default function Home() {
   return (
     <div className="">
-      1111111111111111111111111111111111111111111111111111
+      <Header></Header>
     </div>
   );
 }
