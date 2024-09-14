@@ -1,10 +1,8 @@
 import Image from "next/image";
-import Nav from "@/app/components/header";
 
 export default function Home() {
   return (
     <div className="">
-      <Nav></Nav>
       <Header></Header>
       <RecentBlogs></RecentBlogs>
       <AllBlogs></AllBlogs>
@@ -27,7 +25,10 @@ function Header() {
 function RecentBlogs() {
   return (
     <div>
-      <div className="text-4xl mb-8 mt-40">最近的博客文章</div>
+      <div className="text-4xl mb-16 mt-40 relative tracking-[5px] font-bold">
+        最近的博客文章
+        <img className="absolute top-[40%] left-[-40px] translate-y-[-50%] z-[-1]" src="/title-bg.png" alt=""/>
+      </div>
       <div className="flex flex-wrap justify-between">
         {new Array(4).fill(1).map((i) => {
           return (
@@ -44,12 +45,15 @@ function RecentBlogs() {
 function AllBlogs() {
   return (
     <div>
-      <div className="text-4xl mb-8 mt-40">所有的博客文章</div>
+      <div className="text-4xl mb-16 mt-40 relative tracking-[5px] font-bold">
+        所有的博客文章
+        <img className="absolute top-[40%] left-[-40px] translate-y-[-50%] z-[-1]" src="/title-bg.png" alt=""/>
+      </div>
       <div className="flex flex-wrap justify-between">
         {new Array(6).fill(1).map((i) => {
           return (
             <div key={i}>
-              <BlogCardSmall />
+              <BlogCardSmall/>
             </div>
           )
         })}
@@ -72,7 +76,7 @@ function BlogCard() {
       <div className="mt-8">
         <h2 className="mt-3 text-2xl font-semibold flex justify-between items-center">
           {title}
-          {/*<Icon className="text-2xl" icon="tdesign:arrow-right-up" />*/}
+          <img src="/arrow.png" alt=""/>
         </h2>
         <p className="mt-3 text-card-gray dark:text-card-gray-dark">{intro}</p>
       </div>
@@ -80,7 +84,6 @@ function BlogCard() {
         <div className="h-6 rounded-full inline-flex items-center font-medium mr-2 bg-white">
           <div className={` px-2.5 rounded-full bg-[#F9F5FF] text-[#9635FF]`}>好好</div>
         </div>
-        {/*<Label label={BlogLabel.MANAGEMENT} />*/}
       </div>
     </div>
   )
@@ -97,7 +100,7 @@ function BlogCardSmall() {
       <div className="mt-8">
         <h2 className="mt-3 text-2xl font-semibold flex justify-between items-center">
           {title}
-          {/*<Icon className="text-2xl" icon="tdesign:arrow-right-up" />*/}
+          <img src="/arrow.png" alt=""/>
         </h2>
         <p className="mt-3 text-card-gray dark:text-card-gray-dark">{intro}</p>
       </div>
@@ -105,7 +108,6 @@ function BlogCardSmall() {
         <div className="h-6 rounded-full inline-flex items-center font-medium mr-2 bg-white">
           <div className={` px-2.5 rounded-full bg-[#F9F5FF] text-[#9635FF]`}>好好</div>
         </div>
-        {/*<Label label={BlogLabel.MANAGEMENT} />*/}
       </div>
     </div>
   )

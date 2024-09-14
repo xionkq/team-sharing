@@ -8,6 +8,6 @@ html, body {
 
 body {
   color: #333333;
-  background: linear-gradient(to bottom, #E7D0FF, #FFFFFF);
+  background: linear-gradient(to bottom, #E7D0FF, #FFFFFF 75%, #FFFFFF);
   font-family: Arial, Helvetica, sans-serif;
 }

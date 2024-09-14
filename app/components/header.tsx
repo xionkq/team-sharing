@@ -11,7 +11,7 @@ const nav = [
   },
   {
     name: '项目',
-    href: '/article',
+    href: '/project',
   },
   {
     name: '关于',
